@@ -1,47 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="kosciINF04.MainPage">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="kosciINF04.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+        <VerticalStackLayout>
             <Button
-                 x:Name="ResetBtn"
-                 Text="Reset!" 
-                 Clicked="ResetClicked"
-                 HorizontalOptions="Fill" />
-            <Label
-                Text= "Text!"
-                x:Name="Label1"/>
-            <Label
-                Text="Text"
-                x:Name="Label2"/>
-            <Label
-                Text="Test!"
-                x:Name="Label3"/>
-            <Label
-                Text="Test"
-                x:Name="Label4"/>
-            <Label
-                Text="Test!"
-                x:Name="Label5"/>
-            <Label
-                Text="Wynik: "
-                x:Name="Label6"/>
+                x:Name="ResetBtn"
+                Text="Reset!"
+                Clicked="ResetClicked"/>
+            <HorizontalStackLayout Spacing="10">
+                <Image x:Name="Dice1" Source="question.jpg" WidthRequest="60"/>
+                <Image x:Name="Dice2" Source="question.jpg" WidthRequest="60"/>
+                <Image x:Name="Dice3" Source="question.jpg" WidthRequest="60"/>
+                <Image x:Name="Dice4" Source="question.jpg" WidthRequest="60"/>
+                <Image x:Name="Dice5" Source="question.jpg" WidthRequest="60"/>
+            </HorizontalStackLayout>
 
+            <Label
+                x:Name="Label6"
+                Text="Wynik: 0"
+                FontSize="18"
+                HorizontalOptions="Center"/>
 
             <Button
                 x:Name="CounterBtn"
-                Text="Roll!" 
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+                Text="Roll!"
+                Clicked="OnCounterClicked"/>
+
+
         </VerticalStackLayout>
     </ScrollView>
 

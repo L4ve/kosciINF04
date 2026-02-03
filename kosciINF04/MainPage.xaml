@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kosciINF04.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+            <Button
+                 x:Name="ResetBtn"
+                 Text="Reset!" 
+                 Clicked="ResetClicked"
+                 HorizontalOptions="Fill" />
+            <Label
+                Text= "Text!"
+                x:Name="Label1"/>
+            <Label
+                Text="Text"
+                x:Name="Label2"/>
+            <Label
+                Text="Test!"
+                x:Name="Label3"/>
+            <Label
+                Text="Test"
+                x:Name="Label4"/>
+            <Label
+                Text="Test!"
+                x:Name="Label5"/>
+            <Label
+                Text="Wynik: "
+                x:Name="Label6"/>
+
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Roll!" 
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

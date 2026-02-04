@@ -19,7 +19,14 @@
             roll4 = random.Next(1, 7);
             roll5 = random.Next(1, 7);
 
-            int wynik = roll1 + roll2 + roll3 + roll4 + roll5;
+            int[] rolls = { roll1, roll2, roll3, roll4, roll5 };
+
+            int wynik = rolls
+                .GroupBy(x => x)
+                .Where(g => g.Count() >= 2)
+                .SelectMany(g => g)
+                .Sum();
+
             totalSum += wynik;
 
             Dice1.Source = $"k{roll1}.jpg";

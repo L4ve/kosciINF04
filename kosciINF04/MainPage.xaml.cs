@@ -29,6 +29,7 @@
             Dice5.Source = $"k{roll5}.jpg";
 
             Label6.Text = "Wynik: " + totalSum;
+            Label7.Text = "Wynik tego rzutu: " + wynik;
         }
 
         private void ResetClicked(object? sender, EventArgs e)
@@ -43,6 +44,7 @@
             Dice5.Source = "question.jpg";
 
             Label6.Text = "Wynik: 0";
+            Label7.Text = "Wynik tego rzutu: 0";
         }
     }
 }
